@@ -16,9 +16,12 @@
         </header>
         <main id="site_main">
             <div v-for="album in albums" class="card">
+                <img :src="album.poster" alt="">
                 <h2>{{album.title.toUpperCase()}}</h2>
-                <h4>{{album.author}}</h4>
-                <h4>{{album.year}}</h4>
+                <div class="album_info">
+                    <h4>{{album.author}}</h4>
+                    <h4>{{album.year}}</h4>
+                </div>
             </div>
         </main>
 
