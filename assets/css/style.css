@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 80px;
+    background-color: #2E3A46;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+header > img {
+    height: 60px
+}
+
+#site_main{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+}
+
+.card{
+    background-color: #2E3A46;
+    height: 360px;
+    width: 200px;
+    padding: 20px;
+}
