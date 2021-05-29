@@ -3,7 +3,14 @@ const app = new Vue({
 
     data: {
         albums: {},
+        selected: '',
+        options: [
+            { name: 'All' },
+            { name: 'Rock' },
+            { name: 'Pop' },
+            { name: 'Metal' }
 
+        ]
     },
 
     methods: {},
