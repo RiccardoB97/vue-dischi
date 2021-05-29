@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dischi</title>
+    <!-- Font Awesome ling -->
+    <script src="https://kit.fontawesome.com/1d47f7a9f5.js" crossorigin="anonymous"></script>
     <!-- Main CSS file -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -15,16 +17,23 @@
             <div class="logo">
                 <img src="./assets/img/spotify-logo-png-7053.png" alt="">
             </div>
-            <select name="select" id="select" v-model="selected">
-                <option v-for='option in options'>
-                    {{option.name}}
-                </option>
-            </select>
+            <div>
+                <select name="select" id="select" v-model="selected">
+                    <option v-for='option in options'>
+                        {{option.name}}
+                    </option>
+                </select>
+            </div>
         </header>
         <main id="site_main">
             <div v-for="album in albums" class="card"
                 v-if="selected === album.genre || selected === 'All' || selected ==='' ">
-                <img :src="album.poster" alt="">
+                <div class="album_image">
+                    <div class="overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <img :src="album.poster" alt="">
+                </div>
                 <h2>{{album.title.toUpperCase()}}</h2>
                 <div class="album_info">
                     <h4>{{album.author}}</h4>
