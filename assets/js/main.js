@@ -5,7 +5,6 @@ const app = new Vue({
         albums: {},
         selected: '',
         options: [
-            { name: 'All' },
             { name: 'Rock' },
             { name: 'Pop' },
             { name: 'Metal' },

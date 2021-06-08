@@ -19,6 +19,7 @@
             </div>
             <div>
                 <select name="select" id="select" v-model="selected">
+                    <option value="All">All</option>
                     <option v-for='option in options'>
                         {{option.name}}
                     </option>
