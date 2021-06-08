@@ -5,7 +5,7 @@ const app = new Vue({
         url: 'https://flynn.boolean.careers/exercises/api/array/music',
         albums: null,
         selected: '',
-        options: [{ name: 'All' }]
+        options: ['All']
     },
 
     methods: {},
@@ -14,11 +14,12 @@ const app = new Vue({
         axios.get(this.url)
             .then(response => {
                 this.albums = response.data.response;
-                for (var i = 0; i < this.albums.length; i++) {
-                    if (this.options.includes({ name: this.albums[i].genre })) {
-                        this.options.push({ name: this.albums[i].genre })
+                this.albums.forEach(album => {
+                    if(!this.options.includes(album.genre)){
+                        this.options.push(album.genre)
+                        console.log(this.options);
                     }
-                }
+                })
             })
             .catch(e => {
                 console.error(e);
