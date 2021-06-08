@@ -8,7 +8,8 @@ const app = new Vue({
             { name: 'All' },
             { name: 'Rock' },
             { name: 'Pop' },
-            { name: 'Metal' }
+            { name: 'Metal' },
+            { name: 'Jazz' }
 
         ]
     },
@@ -19,7 +20,6 @@ const app = new Vue({
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
             .then(response => {
                 this.albums = response.data.response;
-                console.log(this.response);
             })
     }
 })
